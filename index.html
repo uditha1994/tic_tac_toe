@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe Deluxe</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="game-wrapper">
+        <div class="game-card">
+            <div class="game-header">
+                <h1><i class="fas fa-times"></i>Tic-Tac-Toe <i class="far fa-circle"></i></h1>
+                <div class="score-board">
+                    <div class="score player-score">
+                        <span>You</span>
+                        <span id="playerScore">0</span>
+                    </div>
+                    <div class="score ties">
+                        <span>Ties</span>
+                        <span id="tieScore">0</span>
+                    </div>
+                    <div class="score computer-score">
+                        <span>You</span>
+                        <span id="computerScore">0</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Game Board -->
+            <div class="game-board">
+                <div class="board-row">
+                    <div class="cell" data-index="0"></div>
+                    <div class="cell" data-index="1"></div>
+                    <div class="cell" data-index="2"></div>
+                </div>
+                <div class="board-row">
+                    <div class="cell" data-index="3"></div>
+                    <div class="cell" data-index="4"></div>
+                    <div class="cell" data-index="5"></div>
+                </div>
+                <div class="board-row">
+                    <div class="cell" data-index="6"></div>
+                    <div class="cell" data-index="7"></div>
+                    <div class="cell" data-index="8"></div>
+                </div>
+            </div>
+
+            <div class="game-footer">
+                <div class="game-status" id="status">Your Turn (x)</div>
+                <div class="game-controls">
+                    <button class="btn-control" id="soundToggle" title="Toggle Sound">
+                        <i class="fas fa-volume-up"></i>
+                    </button>
+                    <button class="btn-control" id="musicToggle" title="Toggle Music">
+                        <i class="fas fa-music"></i>
+                    </button>
+                    <button class="btn-control" id="resetBtn" title="Reset Game">
+                        <i class="fas fa-redo"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+
+</html>
