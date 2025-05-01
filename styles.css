@@ -3,9 +3,11 @@
     --secondary-color:#a29bfe;
     --dark-color:#2d3436;
     --light-color:#f5f6fa;
-    --player-color:#fd79a8;
-    --computer-color:#00cec9;
-    --tie-color:#636e72;
+    --player-color:#c73c6d;
+    --computer-color:#07fff3;
+    --tie-color:#3e545c;
+    --text-dark: #1a1a2e;           /* For dark text */
+  --text-light: #f8f9fa;          /* For light text */
 }
 
 *{
@@ -55,6 +57,7 @@ body{
     text-align: center;
     margin-bottom: 15px;
     flex-shrink: 0;
+    color: var(--text-dark);
 }
 
 .game-header h1{
@@ -65,10 +68,6 @@ body{
     align-items: center;
     justify-content: center;
     gap: 10px;
-}
-
-.game-header h1 i{
-    color: var(--primary-color);
 }
 
 .score-board{
