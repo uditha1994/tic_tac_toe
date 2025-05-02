@@ -125,3 +125,84 @@ body{
     gap: 8px;
     flex: 1;
 }
+
+.cell{
+    flex: 1;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    min-height: 0;
+}
+
+.cell:hover{
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+}
+
+.cell.x{
+    color: var(--player-color);
+}
+
+.cell.o{
+    color: var(--computer-color);
+}
+
+.cell.win{
+    animation: pulse 1s infinite;
+    box-shadow: 0 0 15px currentColor;
+}
+
+@keyframes pulse {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.05);}
+    100% {transform: scale(1);}
+}
+
+.game-footer{
+    text-align: center;
+    flex-shrink: 0;
+    margin-top: 10px;
+}
+
+.game-controls{
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.game-status{
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+    min-height: 1.5rem;
+}
+
+.btn-control{
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-control:hover{
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+.btn-control.active{
+    background: var(--primary-color);
+}
