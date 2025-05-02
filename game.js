@@ -33,8 +33,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function initGame() {
         board = Array(9).fill(null);
-        let currentPlayer = 'X';
-        let gameActive = true;
+        currentPlayer = 'X';
+        gameActive = true;
         status.textContent = 'Your turn (X)';
 
         cells.forEach(cell => {
@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (board[index] || !gameActive) return
 
-        playSound(currentPlayer);
+        playSound(clickSound);
         makeMove(index, currentPlayer);
 
         if (checkWin(currentPlayer)) {
@@ -205,7 +205,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (winningPattern) {
             winningPattern.forEach(index => {
-                document.querySelectorAll(`[data-index="${index}"]`).classList.add('win');
+                document.querySelector(`[data-index="${index}"]`).classList.add('win');
             });
         }
     }
@@ -221,7 +221,7 @@ document.addEventListener('DOMContentLoaded', () => {
         musicEnabled = !musicEnabled;
         musicToggle.classList.toggle('active', musicEnabled);
         musicToggle.innerHTML = musicEnabled ? `<i class="fas fa-music"></i>` :
-            `<i class="fas fa-music-slash"></i>`;
+            `<i class="fas fa-music"></i>`;
 
         if (musicEnabled) {
             backgroundMusic.play().catch(e => console.log("music play prevented: ", e));
